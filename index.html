@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOUTIQUE BY FRANKLIN</title>
     <style>
-        /* Design Orange & Noir Premium - Franklin Edition */
+        /* Design Orange & Noir Premium Compact - Franklin Edition */
         :root {
             --bg-color: #121212;
             --card-bg: #1e1e1e;
@@ -52,32 +52,73 @@
         }
 
         .shop-card {
-            background-color: var(--card-bg); padding: 30px; border-radius: 15px; border: 1px solid #333;
-            text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: space-between; height: 100%;
+            background-color: var(--card-bg); 
+            /* padding réduit pour la compacité */
+            padding: 20px; 
+            border-radius: 15px; 
+            border: 1px solid #333;
+            text-align: center; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            cursor: pointer; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: flex-start; /* Aligne les éléments en haut */
+            height: auto; /* Supprime toute hauteur fixe excessive */
         }
         .shop-card:hover { transform: translateY(-8px); box-shadow: 0 12px 25px var(--hover-shadow); border-color: var(--primary-orange); }
 
-        /* Conteneur de la Lettrine (remplace l'image qui bug) */
+        /* Conteneur de la Lettrine Compact */
         .shop-logo-container {
-            width: 100px; height: 100px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;
-            border-radius: 50%; background-color: #2a2a2a; border: 2px solid #333; transition: border-color 0.3s ease;
+            /* taille réduite de 100px à 70px */
+            width: 70px; 
+            height: 70px; 
+            margin-bottom: 15px; /* espace réduit */
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            border-radius: 50%; 
+            background-color: #2a2a2a; 
+            border: 2px solid #333; 
+            transition: border-color 0.3s ease;
         }
         .shop-card:hover .shop-logo-container { border-color: var(--primary-orange); }
 
         .logo-initial {
-            font-size: 3em; font-weight: bold; color: var(--primary-orange); text-transform: uppercase;
+            /* taille de police réduite de 3em à 2.2em */
+            font-size: 2.2em; 
+            font-weight: bold; 
+            color: var(--primary-orange); 
+            text-transform: uppercase;
         }
 
-        .shop-card h3 { color: #fff; margin: 10px 0; font-size: 1.4em; font-weight: 700; }
+        .shop-card h3 { 
+            color: #fff; 
+            /* marges réduites */
+            margin: 5px 0 10px 0; 
+            /* taille de police réduite de 1.4em à 1.2em */
+            font-size: 1.2em; 
+            font-weight: 700; 
+        }
 
         .category-badge {
-            display: inline-block; margin-top: 15px; padding: 6px 15px; background-color: #2a2a2a; color: var(--primary-orange);
-            border: 1px solid var(--primary-orange); border-radius: 20px; font-size: 0.8em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;
+            display: inline-block; 
+            margin-top: 0; /* Supprime l'espace supérieur excessif */
+            /* padding réduit */
+            padding: 4px 12px; 
+            background-color: #2a2a2a; 
+            color: var(--primary-orange);
+            border: 1px solid var(--primary-orange); 
+            border-radius: 20px; 
+            /* taille de police réduite de 0.8em à 0.75em */
+            font-size: 0.75em; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
         }
         .shop-card:hover .category-badge { background-color: var(--primary-orange); color: #000; }
 
-        /* Modal */
+        /* Modal (inchangé pour les détails) */
         .modal {
             display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%;
             background-color: rgba(0,0,0,0.85); backdrop-filter: blur(5px);
